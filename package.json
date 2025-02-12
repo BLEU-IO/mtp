@@ -1,0 +1,47 @@
+{
+  "name": "@bleu/mtp",
+  "version": "0.1.0",
+  "description": "A powerful and flexible Markdown to PDF converter built by the BLEU community",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "bun build ./src/index.ts --outdir=dist",
+    "test": "bun test",
+    "lint": "bun x eslint src/**/*.ts",
+    "format": "bun x prettier --write \"src/**/*.ts\"",
+    "prepare": "bun run build",
+    "prepublishOnly": "bun test && bun run lint",
+    "dev": "bun --watch src/index.ts"
+  },
+  "keywords": [
+    "markdown",
+    "pdf",
+    "converter",
+    "bleu",
+    "documentation"
+  ],
+  "author": "BLEU Community",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BLEU-IO/mtp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BLEU-IO/mtp/issues"
+  },
+  "homepage": "https://github.com/BLEU-IO/mtp#readme",
+  "dependencies": {
+    "marked": "^5.0.0",
+    "puppeteer": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/marked": "^5.0.0",
+    "@types/node": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^2.0.0",
+    "typescript": "^4.0.0"
+  }
+} 
